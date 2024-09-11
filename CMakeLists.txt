@@ -24,10 +24,12 @@ set(COMPILE_COMMANDS_OUTPUT_DIR ${CMAKE_SOURCE_DIR})
 set(SOURCES
     main.cpp
     src/MainWindow.cpp
+    src/TrackWidget.cpp
 )
 
 set(HEADERS
     src/MainWindow.h
+    src/TrackWidget.h
 )
 
 set(RESOURCES res/res.qrc)
