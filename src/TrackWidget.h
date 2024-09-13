@@ -5,6 +5,8 @@
 #include <QLineEdit>
 #include <QPushButton>
 #include <QWidget>
+#include <QMediaPlayer>
+#include <QSlider>
 
 class TrackWidget : public QWidget
 {
@@ -12,6 +14,10 @@ class TrackWidget : public QWidget
 public:
     TrackWidget(QWidget *parent);
     ~TrackWidget();
+    void setTexts();
+    void changeVolume(int value);
+public slots:
+    void playTrack();
 
 protected:
     QLineEdit *name;
@@ -20,6 +26,9 @@ protected:
     QPushButton *playBtn;
     QPushButton *pauseBtn;
     QPushButton *stopBtn;
+    QSlider * volume;
+
+    QMediaPlayer *player;
 };
 
 #endif /*TRACK_WIDGET_H*/

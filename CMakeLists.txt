@@ -10,7 +10,7 @@ set(CMAKE_AUTORCC ON)
 
 find_package(
   Qt5
-  COMPONENTS Core Widgets
+  COMPONENTS Core Gui Widgets Multimedia
   REQUIRED)
 
 message(STATUS "Qt version: ${Qt5Core_VERSION}")
@@ -38,9 +38,9 @@ set(ALL_SOURCES ${SOURCES} ${HEADERS} ${RESOURCES})
 
 add_executable(dnd-sound-master ${ALL_SOURCES})
 
-target_include_directories(dnd-sound-master PRIVATE src)
+target_include_directories(dnd-sound-master PRIVATE src ${Qt5Multimedia_INCLUDE_DIRS})
 
-target_link_libraries(dnd-sound-master Qt5::Widgets)
+target_link_libraries(dnd-sound-master Qt5::Widgets Qt5::Multimedia)
 
 add_custom_target(
   copy_compile_commands ALL

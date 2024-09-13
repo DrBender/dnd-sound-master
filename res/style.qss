@@ -1,0 +1,5 @@
+
+#TrackWidget QWidget
+#{
+#    border: 2px;
+#}
